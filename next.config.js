@@ -5,6 +5,4 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = {
-  swcMinify: true,
-};
+module.exports = nextConfig

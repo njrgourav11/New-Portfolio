@@ -9,14 +9,14 @@ export default function Logo(props: { finishedLoading: boolean }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           type: "spring",
-          y: { delay: props.finishedLoading ? 0 : 8, duration: 0 },
-          opacity: { delay: props.finishedLoading ? 0 : 8, duration: 0 },
+          delay: props.finishedLoading ? 0 : 8,
+          duration: 0,
         }}
         className="flex justify-center items-center"
       >
         <motion.span
           initial={{ x: 1 }}
-          className="text-3xl font-Header text-AAsecondary" // Increased font size to 3xl
+          className="text-3xl font-Header text-AAsecondary"
         >
           Gourav.
         </motion.span>

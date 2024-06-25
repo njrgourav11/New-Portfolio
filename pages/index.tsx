@@ -1,7 +1,6 @@
 import Header from "../components/Header/Header";
 import Startup from "../components/Header/StartupLogo/Startup";
 import MyName from "../components/Home/MyName/MyName";
-import IMG from "./mg.png";
 import { useContext, useEffect, useState, useRef } from "react";
 import SocialMediaArround from "../components/Home/SocialMediaArround/SocialMediaArround";
 import AboutMe from "../components/Home/AboutMe/AboutMe";
@@ -110,31 +109,29 @@ export default function Home() {
   const meta = {
     title: "Gourav - Software Engineer",
     description: `I've been working on Software development & Cybersecurity. Get in touch with me to know more.`,
-    image: IMG,
+    image: "/mg.png",
     type: "website",
   };
   const isProd = process.env.NODE_ENV === "production";
 
   return (
-    <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta name="robots" content="follow, index" />
-        <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://gourav-seven.vercel.app/`} />
-        <link rel="canonical" href={`https://gourav-seven.vercel.app/`} />
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="B Gourav" />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@njrgourav" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
-      </Head>
-
+    <><Head>
+    <title>{meta.title}</title>
+    <meta name="robots" content="follow, index" />
+    <meta name="description" content={meta.description} />
+    <meta property="og:url" content={`https://gourav-seven.vercel.app/`} />
+    <link rel="canonical" href={`https://gourav-seven.vercel.app/`} />
+    <meta property="og:type" content={meta.type} />
+    <meta property="og:site_name" content="B Gourav" />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:image" content={meta.image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@njrgourav" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content={meta.image} />
+  </Head>
       {!isBlackListed ? (
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
           {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}

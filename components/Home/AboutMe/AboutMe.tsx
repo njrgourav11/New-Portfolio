@@ -107,7 +107,7 @@ export default function AboutMe(props) {
             <div className="absolute w-48 h-full  rounded  translate-x-5 translate-y-5 border-2 border-AAsecondary"></div>
             <div className="absolute w-48 h-full rounded overflow-hidden">
               <Img
-                src={"/me.jpg"}
+                src={"/me.JPG"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />

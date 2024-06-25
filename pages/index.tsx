@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import Startup from "../components/Header/StartupLogo/Startup";
 import MyName from "../components/Home/MyName/MyName";
+import IMG from "./mg.png";
 import { useContext, useEffect, useState, useRef } from "react";
 import SocialMediaArround from "../components/Home/SocialMediaArround/SocialMediaArround";
 import AboutMe from "../components/Home/AboutMe/AboutMe";
@@ -109,7 +110,7 @@ export default function Home() {
   const meta = {
     title: "Gourav - Software Engineer",
     description: `I've been working on Software development & Cybersecurity. Get in touch with me to know more.`,
-    image: "/mg.png",
+    image: IMG,
     type: "website",
   };
   const isProd = process.env.NODE_ENV === "production";
@@ -120,8 +121,8 @@ export default function Home() {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://gourav-seven.com`} />
-        <link rel="canonical" href={`https://gourav-seven.com`} />
+        <meta property="og:url" content={`https://gourav-seven.vercel.app/`} />
+        <link rel="canonical" href={`https://gourav-seven.vercel.app/`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="B Gourav" />
         <meta property="og:description" content={meta.description} />

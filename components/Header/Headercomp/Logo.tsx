@@ -9,8 +9,8 @@ export default function Logo(props: { finishedLoading: boolean }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           type: "spring",
-          y: { delay: props.finishedLoading ? 0 : 8, duration: 0 },
-          opacity: { delay: props.finishedLoading ? 0 : 8, duration: 0 },
+          delay: props.finishedLoading ? 0 : 8,
+          duration: 0,
         }}
         className="flex justify-center items-center"
       >

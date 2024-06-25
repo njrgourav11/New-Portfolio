@@ -108,8 +108,8 @@ export default function Home() {
   console.log("website is rendering...");
   const meta = {
     title: "Gourav - Software Engineer",
-    description: `I've been working on Software development. Get in touch with me to know more.`,
-    image: "/me.jpg",
+    description: `I've been working on Software development & Cybersecurity. Get in touch with me to know more.`,
+    image: "/mg.png",
     type: "website",
   };
   const isProd = process.env.NODE_ENV === "production";
@@ -120,15 +120,15 @@ export default function Home() {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://gourav-portfolio.com`} />
-        <link rel="canonical" href={`https://gourav-portfolio.com`} />
+        <meta property="og:url" content={`https://gourav-seven.com`} />
+        <link rel="canonical" href={`https://gourav-seven.com`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Manu Arora" />
+        <meta property="og:site_name" content="B Gourav" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@titofabdo" />
+        <meta name="twitter:site" content="@njrgourav" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
@@ -146,7 +146,7 @@ export default function Home() {
           {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}
           {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
           {context.sharedState.finishedLoading ? (
-            <Footer githubUrl={"https://github.com/njrgourav11"} hideSocialsInDesktop={true} />
+            <Footer githubUrl={"https://github.com/njrgourav11/New-Portfolio"} hideSocialsInDesktop={true} />
           ) : (
             <></>
           )}

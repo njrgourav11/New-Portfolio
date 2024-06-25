@@ -81,7 +81,7 @@ export default function SomethingIveBuilt() {
               </div>
               <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
               <p className="text-gray-300 md:text-gray-400 text-left md:text-right ">
-  I had made a website for the <span className="text-AAsecondary">Backyard Cafe</span> and delivered it using HTML, CSS, and JavaScript. The project involved creating a responsive and visually appealing design that aligned with the cafe's brand. One notable feature was the integration of an online menu and reservation system, which allowed users to easily browse the menu and book tables online. Additionally, I implemented SEO best practices to improve the cafe's online visibility, resulting in increased web traffic and customer engagement. This project highlighted my ability to deliver functional and attractive web solutions tailored to client needs.
+  I had made a website for the <span className="text-AAsecondary">Backyard Cafe</span> and delivered it using HTML, CSS, and JavaScript. The project involved creating a responsive and visually appealing design that aligned with the cafe&apos;s brand. One notable feature was the integration of an online menu and reservation system, which allowed users to easily browse the menu and book tables online. Additionally, I implemented SEO best practices to improve the cafe&apos;s online visibility, resulting in increased web traffic and customer engagement. This project highlighted my ability to deliver functional and attractive web solutions tailored to client needs.
 </p>
               </div>
               <ul

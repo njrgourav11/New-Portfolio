@@ -91,11 +91,13 @@ export default function Home() {
 
   console.log("website is rendering...");
   const meta = {
-    title: "Gourav - Software Engineer",
-    description: `I've been working on Software development & Cybersecurity. Get in touch with me to know more.`,
+    title: "Gourav Portfolio - Software Engineer | B Gourav",
+    description: "Welcome to Gourav's portfolio! Discover my work as a software engineer with expertise in full-stack development, software solutions, and cybersecurity.",
+    keywords: "Gourav, B Gourav, Gourav portfolio, software engineer, full-stack developer, cybersecurity, web development, portfolio, bgourav, gourav, sde gourav",
     image: "/mg.png",
     type: "website",
-  };
+};
+
   const isProd = process.env.NODE_ENV === "production";
 
   return (

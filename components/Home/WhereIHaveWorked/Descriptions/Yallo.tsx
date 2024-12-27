@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowIcon from "../../../Icons/ArrowIcon";
 import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
-export default function FeverTokens() {
+export default function Yallo() {
   const tasks = [
     {
       text: "Conducted Comprehensive Market Research: Identified trends and consumer behaviors through comprehensive market research. Utilized analytical skills to assess the performance of digital marketing campaigns, providing insights for strategic improvements.",

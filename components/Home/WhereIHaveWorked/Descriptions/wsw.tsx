@@ -2,7 +2,7 @@ import React from "react";
 import ArrowIcon from "../../../Icons/ArrowIcon";
 import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
 
-export default function TrouveTavoie() {
+export default function WSW() {
   const tasks = [
     {
       text: "We created an app which will create awareness among the Govt School(6000 Approx) Students about Cyber World",
@@ -21,14 +21,16 @@ export default function TrouveTavoie() {
   return (
     <>
       <div className="flex flex-col space-y-5 max-w-xl px-4 md:px-0">
-        <div className="flex flex-col spacey-y-2">
+      <div className="flex flex-col space-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
-            Cyber Ambassador Platform <span className="text-AAsecondary">@ React</span>
+          Cyber Ambassador Platform <span className="text-AAsecondary">@ React</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">June 2024 - July 2024</span>
-          <span className="font-mono text-xs text-AAsecondary hover:cursor-pointer" style={{ fontSize: "0.6rem" }}
+          <span className="font-mono text-xs text-gray-500">June 2024 - Jul 2024</span>
+          <span
+            className="font-mono text-xs text-AAsecondary hover:cursor-pointer"
+            style={{ fontSize: "0.6rem" }}
            // set on click to open the website
            onClick={() => window.open("https://www.womensafetywing.telangana.gov.in/", "_blank")}
           >

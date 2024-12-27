@@ -306,7 +306,7 @@ export default function SomethingIveBuilt() {
           absolute md:grid grid-cols-12 w-full h-full  content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
-              <a href="https://message-api-woad.vercel.app/" target={"_blank"} rel="noreferrer">
+              <a href="https://nist-attendance.in/" target={"_blank"} rel="noreferrer">
                 <div
                   // onClick={}
                   className="absolute w-full h-full rounded bg-AAprimary 
@@ -318,7 +318,7 @@ export default function SomethingIveBuilt() {
                 <span className="text-AAsecondary text-xl">In initiation...</span>
               </div>
 
-              <Img src={"/attendance.png"} alt={"Project Screen shot"} className={`w-full rounded h-full `} />
+              <Img src={"/nistu.png"} alt={"Project Screen shot"} className={`w-full rounded h-full `} />
             </div>
           </div>
 
@@ -329,7 +329,7 @@ export default function SomethingIveBuilt() {
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
-                <Img src={"/attendance.png"} alt={"Project Screen shot"} className={`w-full h-full `} />
+                <Img src={"/nistu.png"} alt={"Project Screen shot"} className={`w-full h-full `} />
               </div>
             </div>
             <div className="absolute w-full   rounded  ml-4 mt-2  text-end pr-8">
@@ -358,13 +358,14 @@ export default function SomethingIveBuilt() {
                text-sm font-Text2 md:justify-end"
               >
                 <span className="pr-4 z-10">Twilio</span>
+                <span className="pr-4 z-10">Tailwind</span>
                 <span className="pr-4 z-10">Email Js</span>
                 <span className="pr-4 z-10">Firebase</span>
                 <span className="pr-4 z-10">React</span>
               </ul>
               <div className="z-10 flex fle-row space-x-5 sm:pt-0 pt-2">
                 <GithubIcon link="https://github.com/njrgourav11/Message-Api" />
-                <a href="https://message-api-woad.vercel.app/" target={"_blank"} rel="noreferrer">
+                <a href="https://nist-attendance.in/" target={"_blank"} rel="noreferrer">
                   <ExternalLink url={""} router={router} />
                 </a>
               </div>
@@ -380,7 +381,7 @@ export default function SomethingIveBuilt() {
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
             <div className="relative rounded w-full h-full col-start-6 col-span-7 ">
-              <a href="https://github.com/hktitof/CallCenter" target={"_blank"} rel="noreferrer">
+              <a href="https://github.com/njrgourav/jirds" target={"_blank"} rel="noreferrer">
                 <div
                   className="absolute w-full h-full rounded bg-AAprimary 
            transition-opacity opacity-60 hover:opacity-0 hover:cursor-pointer duration-300"
@@ -408,7 +409,7 @@ export default function SomethingIveBuilt() {
             >
               <div className="flex flex-col space-y-1  z-10">
                 <span className="text-AAsecondary text-base">Recent Project</span>
-                <a href="https://jirds.vercel.app/" target={"_blank"} rel="noreferrer">
+                <a href="https://jirds.in" target={"_blank"} rel="noreferrer">
                   <span className=" md:text-gray-200 text-AAsecondary font-bold text-xl hover:cursor-pointer">
                     JIRDS Landing Page
                   </span>
@@ -430,7 +431,7 @@ export default function SomethingIveBuilt() {
               </ul>
               <div className="z-10 flex fle-row space-x-5 sm:pt-0 pt-2">
                 <GithubIcon link="https://github.com/njrgourav11/JIRDS" />
-                <a href="https://jirds.vercel.app/" target={"_blank"} rel="noreferrer">
+                <a href="https://jirds.in" target={"_blank"} rel="noreferrer">
                   <ExternalLink url={""} router={router} />
                 </a>
               </div>

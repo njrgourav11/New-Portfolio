@@ -5,6 +5,7 @@ import { useContext, useEffect, useState, useRef } from "react";
 import SocialMediaArround from "../components/Home/SocialMediaArround/SocialMediaArround";
 import AboutMe from "../components/Home/AboutMe/AboutMe";
 import ThisCantBeReached from "../components/Home/ThisSiteCantBeReached/ThisCantBeReached";
+import BlogsPage from "../components/Home/Blogs/Blogs";
 import WhereIHaveWorked from "../components/Home/WhereIHaveWorked/WhereIHaveWorked";
 import SomethingIveBuilt from "../components/Home/SomethingIveBuilt/SomethingIveBuilt";
 import GetInTouch from "../components/Home/GetInTouch/GetInTouch";
@@ -35,11 +36,13 @@ export default function Home() {
         try {
           const IP_Address = async () => {
             return fetch("https://api.ipify.org/?format=json")
-              .then(res => res.json())
-              .then(data => data.ip);
+              .then((res) => res.json())
+              .then((data) => data.ip);
           };
 
-          const response = await fetch("/api/userInfoByIP/" + (await IP_Address()));
+          const response = await fetch(
+            "/api/userInfoByIP/" + (await IP_Address())
+          );
           const data = await response.json();
           setUserData(data);
         } catch (error) {
@@ -54,7 +57,9 @@ export default function Home() {
   useEffect(() => {
     if (!IsBlackListEmpty && userData) {
       if (process.env.NEXT_PUBLIC_BLACKLIST_COUNTRIES && userData.country) {
-        if (process.env.NEXT_PUBLIC_BLACKLIST_COUNTRIES.includes(userData.country)) {
+        if (
+          process.env.NEXT_PUBLIC_BLACKLIST_COUNTRIES.includes(userData.country)
+        ) {
           setIsBlackListed(true);
         }
       }
@@ -64,18 +69,31 @@ export default function Home() {
   useEffect(() => {
     clearInterval(context.sharedState.userdata.timerCookieRef.current);
     if (typeof window !== "undefined") {
-      window.removeEventListener("resize", context.sharedState.userdata.windowSizeTracker.current);
-      window.removeEventListener("mousemove", context.sharedState.userdata.mousePositionTracker.current, false);
-      window.removeEventListener("resize", context.sharedState.typing.eventInputLostFocus);
-      document.removeEventListener("keydown", context.sharedState.typing.keyboardEvent);
+      window.removeEventListener(
+        "resize",
+        context.sharedState.userdata.windowSizeTracker.current
+      );
+      window.removeEventListener(
+        "mousemove",
+        context.sharedState.userdata.mousePositionTracker.current,
+        false
+      );
+      window.removeEventListener(
+        "resize",
+        context.sharedState.typing.eventInputLostFocus
+      );
+      document.removeEventListener(
+        "keydown",
+        context.sharedState.typing.keyboardEvent
+      );
     }
     setTimeout(() => {
       setShowElement(true);
     }, 4500);
 
-    setTimeout(() => {
-      setShowThisCantBeReached(false);
-    }, 5400);
+    // setTimeout(() => {
+    //   setShowThisCantBeReached(false);
+    // }, 5400);
 
     setTimeout(() => {
       setShowElement(false);
@@ -91,12 +109,16 @@ export default function Home() {
 
   console.log("website is rendering...");
   const meta = {
-    title: "Gourav Portfolio - Software Engineer | B Gourav",
-    description: "Welcome to Gourav's portfolio! Discover my work as a software engineer with expertise in full-stack development, software solutions, and cybersecurity.",
-    keywords: "Gourav, B Gourav, Gourav portfolio, software engineer, full-stack developer, cybersecurity, web development, portfolio, bgourav, gourav, sde gourav",
+    title: "B Gourav - Full Stack Developer | Cybersecurity Expert | Portfolio",
+    description:
+      "Explore B Gourav's personal portfolio. A Full Stack Developer and Cybersecurity Expert from Odisha, India, showcasing software engineering projects, skills, and professional achievements.",
+    keywords:
+      "B Gourav, Gourav Portfolio, Full Stack Developer, Cybersecurity Expert, Software Engineer, Odisha, India, Web Developer, React Developer, Next.js, Python, PostgreSQL, Software Solutions, Full Stack Portfolio, Professional Portfolio, SDE Gourav, B Gourav Full Stack",
+    author: "B Gourav",
     image: "/mg.png",
     type: "website",
-};
+    url: "https://gourav-seven.vercel.app/",
+  };
 
   const isProd = process.env.NODE_ENV === "production";
 
@@ -106,10 +128,12 @@ export default function Home() {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://gourav-seven.vercel.app/`} />
-        <link rel="canonical" href={`https://gourav-seven.vercel.app/`} />
+        <meta content={meta.keywords} name="keywords" />
+        <meta content={meta.author} name="author" />
+        <meta property="og:url" content={meta.url} />
+        <link rel="canonical" href={meta.url} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="B Gourav" />
+        <meta property="og:site_name" content="B Gourav Portfolio" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
@@ -118,21 +142,49 @@ export default function Home() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+
+        <link rel="icon" href="/favicon.ico" />
+
       </Head>
 
       {!isBlackListed ? (
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-          {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
-          {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>}
-          <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} />
+          {context.sharedState.finishedLoading ? (
+            <></>
+          ) : ShowThisCantBeReached ? (
+            <ThisCantBeReached />
+          ) : (
+            <></>
+          )}
+          {context.sharedState.finishedLoading ? (
+            <></>
+          ) : ShowElement ? (
+            <Startup />
+          ) : (
+            <></>
+          )}
+          <Header
+            finishedLoading={context.sharedState.finishedLoading}
+            sectionsRef={homeRef}
+          />
           <MyName finishedLoading={context.sharedState.finishedLoading} />
-          <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} />
-          {context.sharedState.finishedLoading ? <AboutMe ref={aboutRef} /> : <></>}
+          <SocialMediaArround
+            finishedLoading={context.sharedState.finishedLoading}
+          />
+          {context.sharedState.finishedLoading ? (
+            <AboutMe ref={aboutRef} />
+          ) : (
+            <></>
+          )}
           {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>}
           {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}
           {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
+          {context.sharedState.finishedLoading ? <BlogsPage /> : <></>}
           {context.sharedState.finishedLoading ? (
-            <Footer githubUrl={"https://github.com/njrgourav11/New-Portfolio"} hideSocialsInDesktop={true} />
+            <Footer
+              githubUrl={"https://github.com/njrgourav11/New-Portfolio"}
+              hideSocialsInDesktop={true}
+            />
           ) : (
             <></>
           )}

@@ -89,6 +89,23 @@ const MobileMenu = props => {
               Contact
             </span>
           </Link>
+          <Link
+            to="Blogs"
+            spy={true}
+            smooth={true}
+            offset={100}
+            duration={200}
+            onClick={() => closeMenu()}
+            className="flex flex-col text-center space-y-2"
+          >
+            <span className="text-AAsecondary text-xs font-mono">05.</span>
+            <span
+              className="text-white font-Text2 text-sm sm:text-base
+             hover:text-AAsecondary hover:cursor-pointer duration-300"
+            >
+              Blogs
+            </span>
+          </Link>
           <a href={"/Gouravresume.pdf"} target={"_blank"} rel="noreferrer">
             <button
               className="rounded border font-Text2  border-AAsecondary
